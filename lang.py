@@ -1,5 +1,5 @@
 import requests
-import pandas
+import pandas as pd
 import re
 
 data = []
@@ -16,6 +16,10 @@ for l in languages:
 	language = l[0]
 	description = l[1]
 	data.append((language, description))
+
+
+chart = pd.DataFrame(data, columns=["Language", "Description"])
+print(chart)
 
 
 
